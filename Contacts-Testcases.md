@@ -2,8 +2,9 @@
 # TC-01
 ## Verify that the user can view all contacts without any filters.
 ### Steps
-- Send a GET request to the /contacts endpoint.
-- Then Click Excute.
+- Navigate to the GET /contacts endpoint.
+- Click on "Try it out" and then "Execute."
+- Show the response and explain that it includes a list of all contacts.
 ### Expected Result
 - The response includes a list of all contacts.
 ### Actual Result
@@ -13,8 +14,9 @@
 ## Verify that the user can view contacts with pagination
 ## Test Data: page=1, limit=10
 ### Steps
-- Send a GET request to the /contacts endpoint with pagination parameters.
-- Then Click Excute.
+- Navigate to the GET /contacts endpoint.
+- Add query parameters for pagination (e.g., ?page=1&limit=10).
+- Execute and review the paginated response.
 ### Expected Result
 - The response includes a paginated list of contacts.
 ### Actual Result
@@ -24,78 +26,142 @@
 ## Verify that the user can view contacts with pagination
 ## Test Data: page=2, limit=10
 ### Steps
-- Send a GET request to the /contacts endpoint with pagination parameters.
-- Then Click Excute.
+- Navigate to the GET /contacts endpoint.
+- Add query parameters for pagination (e.g., ?page=2&limit=10).
+- Execute and review the paginated response.
+### Expected Result
+- The response includes a paginated list of contacts.
+### Actual Result
+- The response includes a paginated list of contacts.
+  
+# TC-04
+## Verify that the user can view contacts with pagination
+## Test Data: page=1, limit=2
+### Steps
+- Navigate to the GET /contacts endpoint.
+- Add query parameters for pagination (e.g., ?page=1&limit=2).
+- Execute and review the paginated response.
 ### Expected Result
 - The response includes a paginated list of contacts.
 ### Actual Result
 - The response includes a paginated list of contacts.
 
-# TC-04
+# TC-05
 ## Verify that the user can view contacts with search parameters.
 ## Test Data: "Email:mohamedelbehairy1@hotmail.com"
 ### Steps
-- Send a GET request to the /contacts endpoint with search parameters.
-- Then Click Excute.
+- Navigate to the GET /contacts endpoint.
+- Add a query parameter for search (e.g., ?email).
+- Execute and show how the response filters contacts based on the search.
+
 ### Expected Result
 - The response includes contacts matching the search criteria.
 ### Actual Result
 - The response includes contacts matching the search criteria.
 - Showing all the details of the contact.
+- 
+# TC-06
+## Verify that the user can view contacts with search parameters.
+## Test Data: "Firstname"
+### Steps
+- Navigate to the GET /contacts endpoint.
+- Add a query parameter for search (e.g., ?firstname).
+- Execute and show how the response filters contacts based on the search.
+
+### Expected Result
+- The response includes contacts matching the search criteria.
+### Actual Result
+- The response includes contacts matching the search criteria.
+- Showing all the details of the contact.
+
+# TC-07
+## Verify that the user can view contacts with search parameters.
+## Test Data: "Lastname"
+### Steps
+- Navigate to the GET /contacts endpoint.
+- Add a query parameter for search (e.g., ?lastname).
+- Execute and show how the response filters contacts based on the search.
+
+### Expected Result
+- The response includes contacts matching the search criteria.
+### Actual Result
+- The response includes contacts matching the search criteria.
+- Showing all the details of the contact.
+- 
+# TC-08
+## Verify that the user can view contacts with search parameters (Invalid Contact email).
+## Test Data: "email"
+### Steps
+- Navigate to the GET /contacts endpoint.
+- Use an invalid ID in the GET /contacts/{email} endpoint.
+- Execute and demonstrate the error message returned.
+### Expected Result
+- The response includes the error message.
+### Actual Result
+- The response includes contacts matching the search criteria.
+- Showing all the details of the contact.(Failed)
   
 * Create New Contact
-# TC-05
+# TC-09
 ## Verify that the user can create a new contact with valid details.
 ## Test Data 
 - Mohamed
 - samir55486@gmail.com
 - 01155003316"
 ### Steps
-- Send a POST request to the /contacts endpoint with valid contact details.
+- Navigate to the POST /contacts endpoint.
+- Input valid data in the payload (e.g., { "name": "John Doe", "email": "john@example.com" }).
+- Execute and show the success response.
 ### Expected Result
 - A success message is returned, and the new contact is added to the contact list.
 ### Actual Result
 - A success message is returned, and the new contact is added to the contact list.
 
-# TC-06
-## Verify that the user cannot create a new contact with missing required fields.
+# TC-10
+## Verify that the user can create a new contact with valid details.
 ## Test Data 
-"When i fill all fields except ""Phone number""
-Error Massage Appered with missing details."
+- Mohamed
+- samir55486@gmail.com
+- 01155003316"
 ### Steps
-- Send a POST request to the /contacts endpoint with missing details .
-### Expected Result
-- The response returns an error message indicating missing required fields.
-### Actual Result
-- The response returns an error message indicating missing required fields.
-
-# TC-07
-## Verify that the user can create another new contact with valid details.
-## Test Data 
-"samir55486@gmail.com
-01155003319"
-### Steps
-- Send a POST request to the /contacts endpoint with valid contact details.
+- Navigate to the POST /contacts endpoint.
+- Input valid data in the payload (e.g., { "name": "John Doe", "email": "john@example.com" }).
+- Execute and show the success response.
 ### Expected Result
 - A success message is returned, and the new contact is added to the contact list.
 ### Actual Result
 - A success message is returned, and the new contact is added to the contact list.
 But,The balance for the Contacts created have the same number, Despite entering different number in balance for each Contact.(Failed)
 
-# TC-08
+# TC-11
+## Verify that the user cannot create a new contact with missing required fields.
+## Test Data 
+"When i fill all fields except ""Phone number""
+### Steps
+- Send a POST request to the /contacts endpoint with missing details .
+### Expected Result
+- The response returns an error message indicating missing required fields.
+- Error Massage Appered with missing details.
+### Actual Result
+- The response returns an error message indicating missing required fields.
+
+
+# TC-12
 ## Verify that the user can create another new contact with valid details..
 ## Test Data 
 "mohamedelbehairy99@hotmail.com
 01155003319"
 ### Steps
-- Send a POST request to the /contacts endpoint with valid contact details.
+- Navigate to the POST /contacts endpoint.
+- Input valid data in the payload (e.g., { "name": "John Doe", "email": "john@example.com" }).
+- Execute and show the success response.
 ### Expected Result
 - A success message is returned, and the new contact is added to the contact list.
 ### Actual Result
 - A success message is returned, and the new contact is added to the contact list.
 But,The Username for the Contacts created have been generated by the software giving each contact same Username, Despite entering different number in Username for each Contact.(Failed)
 
-# TC-09
+# TC-13
 ## Verify that the user can create another new contact with valid details..
 ## Test Data 
 samir55486@gmail.com
@@ -107,8 +173,35 @@ samir55486@gmail.com
 ### Actual Result
 - A success message is returned, and the new contact is added to the contact list.But The"ID" For the Created Contact should generated from the server not to be created by the User & Its not unique. Also all created contact have same ID number , Id num suppose to be unique.(Failed)
 
+# TC-14
+## Verify that the user cannot create a new contact with missing required fields..
+## Test Data 
+"samir55486@gmail.com
+01155003319"
+### Steps
+- Navigate to the POST /contacts endpoint.
+- Input data with all required fields (e.g., no name).
+- Execute and demonstrate the error message returned.
+### Expected Result
+- A error message is returned, and the new contact is added to the contact list.
+### Actual Result
+- A success message is returned, and the new contact is added to the contact list.
+- Despite the missing field "username".(Failed)
+
+# TC-15
+## Verify that the user cannot create a new contact with missing required fields.
+## Test Data 
+"When i fill all fields except "balance number"
+### Steps
+- Send a POST request to the /contacts endpoint with missing details .
+### Expected Result
+- The response returns an error message indicating missing required fields.
+- Error Massage Appered with missing details.
+### Actual Result
+- The response returns an error message indicating missing required fields.
+  
 * Request a Contact by Unique ID
-# TC-10
+# TC-16
 ## Verify that the user can request a contact using a valid unique ID.
 ### Steps
 - Send a GET request to the /contacts/{id} endpoint, using a valid ID.
@@ -116,55 +209,74 @@ samir55486@gmail.com
 ### Expected Result
 - The response includes the details of the specified contact.
 ### Actual Result
-- The response doesn't includes the details of the specified contact, giving details for another contact.
+- The response doesn't includes the details of the specified contact, giving details for another contacts since all contacts have the same iD.
 - How can i access data not related to my contact ?(Failed)
 
+# TC-17
+## Verify that the user can request a contact without providing a contact ID.
+### Steps
+- Send a GET request to the /contacts/{id} endpoint, using a valid ID.
+- Then Click Excute.
+### Expected Result
+- This test is shouldnt show any test result because a valid ID is required to fetch contact details.
+### Actual Result
+- No actual resul, since there's no action occured.
+  
 * Update Existing Contact
- # TC-11
+# TC-18
 ## Verify that the user can update an existing contact's information.
 ### Steps
-- Send a PUT request to the /contacts/{id} endpoint with updated contact details.
-- update the balance and username
-- Then Click Excute.
+- Use the PUT /contacts/{id} endpoint with valid data (e.g.,balance num.& username).
+- Execute and demonstrate the error message returned.
 ### Expected Result
 - The response includes the details of the specified contact.
 ### Actual Result
 - The response doesn't includes the details of the specified contact,it updates the balance but the username doesn't change or updated.(Failed)
 
- # TC-12
+ # TC-19
+## Verify that the user can update an existing contact's information.
+### Steps
+- Use the PUT /contacts/{id} endpoint with valid data (e.g.lastname).
+- Execute and demonstrate the error message returned.
+### Expected Result
+- The response includes the details of the specified contact.
+### Actual Result
+- The response includes 204 Msg of the specified contact,but the last name for the id doesn't change.(Failed)
+  
+# TC-20
 ## Verify that the user cannot update a contact with invalid data.
 ### Steps
 - Send a PUT request to the /contacts/{id} endpoint with invalid data.
-- update the balance and username
-- Then Click Excute.
+- Click Excute.
 ### Expected Result
 - The response returns an error message indicating the invalid data.
 ### Actual Result
 - There's no excution for the invaild id.
 
 * Remove Contacts
- # TC-13
+# TC-21
 ## Verify that the user can remove an existing contact.
 ### Steps
-- Send a DELETE request to the /contacts/{id} endpoint with a valid contact ID.
-- Then Click Excute.
+- Use the DELETE /contacts/{id} endpoint with a valid ID.
+- Execute and show the success response confirming removal.
 ### Expected Result
--A success message is returned, and the contact is removed from the contact list.
+- A success message is returned, and the contact is removed from the contact list.
 ### Actual Result
-- There's no action taken by the software & the contact not deleted.(failed)
+- A success message is returned,but all contacts with the same id still exist in database & didn't remove.(failed)
 
- # TC-14
+# TC-22
 ## Verify that the user receives an error when trying to remove a non-existent contact.
 ### Steps
 - Send a DELETE request to the /contacts/{id} endpoint with a invalid contact ID.
-- Then Click Excute.
+- Execute and demonstrate the error message returned.
 ### Expected Result
 -The response returns an error message indicating the contact does not exist.
 ### Actual Result
--  The response returns an error message indicating the contact does not exist.
+-The response includes 204 Msg of the specified contact,but the last name for the id doesn't change.(failed)
+  
 
  * Add Amount to Contact's Balance
-# TC-15
+# TC-23
 ## Verify that the user can add a specific amount to a contact's balance. contact.
 ### Steps
 - Send a PATCH request to the /contacts/{id}/balance endpoint with the amount to be added.
@@ -174,7 +286,7 @@ samir55486@gmail.com
 ### Actual Result
 -  The software add wrong amount to the balance.if i add 3 to the amount the software made it 6 it doubles the number then added it to the balance.(Failed)
 
-# TC-16
+# TC-24
 ## Verify that the user can add a specific amount to a contact's balance. contact.
 ### Steps
 - Verify that the user cannot add a negative amount to a contact's balance.
@@ -182,6 +294,6 @@ samir55486@gmail.com
 ### Expected Result
 -end a PATCH request to the /contacts/{id}/balance endpoint with a negative amount.
 ### Actual Result
--The software add wrong amount to the balance.if i add 3 to the amount the software made it 6 it doubles the number then added it to the balance.(Failed)
+- The software accepts the negative amount, i guess that doesn't suppose to happen.Failed)
   
  
