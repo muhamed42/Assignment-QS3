@@ -31,7 +31,7 @@
 ### Actual Result
 - The response includes a paginated list of contacts.
 
-# TC-03
+# TC-04
 ## Verify that the user can view contacts with search parameters.
 ## Test Data: "Email:mohamedelbehairy1@hotmail.com"
 ### Steps
@@ -172,7 +172,7 @@ samir55486@gmail.com
 ### Expected Result
 -A success message is returned, and the contact's balance is updated accordingly.
 ### Actual Result
--  The software add wrong amount to the balance.(Failed)
+-  The software add wrong amount to the balance.if i add 3 to the amount the software made it 6 it doubles the number then added it to the balance.(Failed)
 
 # TC-16
 ## Verify that the user can add a specific amount to a contact's balance. contact.
@@ -182,6 +182,6 @@ samir55486@gmail.com
 ### Expected Result
 -end a PATCH request to the /contacts/{id}/balance endpoint with a negative amount.
 ### Actual Result
--  The software add wrong amount to the balance.(Failed)
+-The software add wrong amount to the balance.if i add 3 to the amount the software made it 6 it doubles the number then added it to the balance.(Failed)
   
  
