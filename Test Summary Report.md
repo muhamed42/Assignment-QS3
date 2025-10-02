@@ -6,7 +6,7 @@
 - Test Cases Fail= 10
 - Pass rate= 58%
 - Fail rate= 42%
-- Number of Defects Detected= 10
+- Number of Bugs Detected= 10
 
 ## Mange Invoices Module 
 * Test Cases Rate: 
@@ -15,4 +15,4 @@
 - Test Cases Fail= 8
 - Pass rate= 53%
 - Fail rate= 47%
-- Number of Defects Detected= 8
+- Number of Bugs Detected= 8
