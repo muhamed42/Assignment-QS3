@@ -99,7 +99,7 @@
 - The response includes the error message.
 ### Actual Result
 - The response includes contacts matching the search criteria.
-- Showing all the details of the contact.(Failed)
+- Showing all the details of the contact.
   
 # Create New Contact
 # TC-09🟢
@@ -131,7 +131,7 @@
 - A success message is returned, and the new contact is added to the contact list.
 ### Actual Result
 - A success message is returned, and the new contact is added to the contact list.
-But,The balance for the Contacts created have the same number, Despite entering different number in balance for each Contact.(Failed)
+But,The balance for the Contacts created have the same number, Despite entering different number in balance for each Contact.
 
 # TC-11
 ## Verify that the user cannot create a new contact with missing required fields.
