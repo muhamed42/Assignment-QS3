@@ -167,9 +167,18 @@
 ##  Verify that the user can pay a specific invoice with a valid amount.
 ### Steps
 - POST /invoices/{id}/pay endpoint.
-- "Click 'Try it out', enter a valid invoice ID, and hit 'Execute.'
+-  enter a valid invoice ID, let’s pay a specific invoice with a valid amount." and hit 'Execute.'
 ### Expected Result
 - The invoice is marked as paid, and the payment amount is added to the contact's balance.
 ### Actual Result
 - The response returns Error: response status is 400 with response body"Invoice is already paid."(Failed)
-- 
+
+# TC-15
+##  Verify that the user can pay a specific invoice with a valid amount for non-exsitence Id invoice .
+### Steps
+- POST /invoices/{id}/pay endpoint.
+-  enter a invalid invoice ID, let’s pay a specific invoice with a valid amount." and hit 'Execute.'
+### Expected Result
+- The response returns an error message non-existence Id invoice
+### Actual Result
+- The response returns Error: response status is 400 with response body"Invoice is already paid."(Failed)
