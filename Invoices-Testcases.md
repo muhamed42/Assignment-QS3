@@ -70,7 +70,7 @@
 - The response should indicate that the invoice wasn't created successfully.
 ### Actual Result
 - The response should indicate that the invoice wasn't created successfully.
-- required discount % should be between 0 t0 100.
+- required discount % should be between 0 to 100.
 
 # TC-07
 ## Verify that the user can't create a new invoice with negative amount in tax fields.
