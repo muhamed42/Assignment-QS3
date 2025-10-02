@@ -21,7 +21,7 @@
 - The response should indicate that the invoice was created successfully.
 ### Actual Result
 - A new invoice is created, and the response indicates success.
-- But it has a wrong "Username" not as i entered while create invoice, Also all Invoices that have been created have same "Username*.(Failed)
+- But it has a wrong "Username" not as i entered while create invoice, Also all Invoices that have been created have same "Username".(Failed)
 
   
 # TC-03
@@ -117,7 +117,7 @@
 ### Expected Result
 - The response contains detailed information for the specified invoice.
 ### Actual Result
-- The response contains worng & an invoice details for the inserted id invoice.(Failed  
+- The response contains worng & an invoice details for the inserted id invoice.(Failed)  
 
 # TC-11
 ## Verify that the user can view detailed information of a specific invoice using a invalid ID.
@@ -130,7 +130,7 @@
 - The response returns an error message.
 
 # TC-12
-## Verify that the user can view detailed information of a specific invoice using a non-existence ID.
+## Verify that the user can't view detailed information of a specific invoice using a non-existence ID.
 ### Steps
 - GET /invoices/{id} endpoint.
 - "Click 'Try it out', enter the non-existence ID, and hit 'Execute.' The response shouldn't provide the any invoice details."
@@ -161,9 +161,19 @@
 - The invoice is marked as returned, and the contact's balance is adjusted.
 ### Actual Result
 - Executed and observed the error message "Cannot return a paid invoice".(Failed)
-  
-# Pay Invoice
+
 # TC-15
+## Verify that the user can't return an existing invoice with invalid invoice ID.
+### Steps
+- POST /invoices/{id}/return endpoint.
+- "Click 'Try it out', enter the invalid invoice ID, and hit 'Execute.'
+### Expected Result
+- The invoice is marked as unreturned due to the invalid invoice id.
+### Actual Result
+- Executed and observed the  message "Cannot return a paid invoice".(Failed)
+   
+# Pay Invoice
+# TC-16
 ##  Verify that the user can pay a specific invoice with a valid amount.
 ### Steps
 - POST /invoices/{id}/pay endpoint.
@@ -173,7 +183,7 @@
 ### Actual Result
 - The response returns Error: response status is 400 with response body"Invoice is already paid."(Failed)
 
-# TC-16
+# TC-17
 ##  Verify that the user can pay a specific invoice with a valid amount for non-exsitence Id invoice .
 ### Steps
 - POST /invoices/{id}/pay endpoint.
