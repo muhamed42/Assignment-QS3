@@ -1,4 +1,4 @@
-* View List of Invoices
+# View List of Invoices
 # TC-01
 ## Verify that the user can view a list of invoices associated with their account.
 ### Steps
@@ -10,7 +10,7 @@
 ### Actual Result
 - The response includes a list of all invoices.
 
-* Create New Invoice
+# Create New Invoice
 # TC-02
 ## Verify that the user can create a new invoice with valid details.
 ### Steps
@@ -96,7 +96,7 @@
 - The response should indicate that the invoice wasn't created successfully.
 - Invalid leading zero before '1'
 
- # TC-09
+# TC-09
 ## Verify that the user can't create a new invoice with invalid amount cost fields.
 ### Steps
 - Input amount in the payload with cost="a" .
@@ -108,8 +108,8 @@
 - The response should indicate that the invoice wasn't created successfully.
 - 'a' is an invalid start of a value
 
-* View Invoice Details
-# TC-09
+# View Invoice Details
+# TC-10
 ## Verify that the user can view detailed information of a specific invoice using a valid ID.
 ### Steps
 - GET /invoices/{id} endpoint.
@@ -119,7 +119,7 @@
 ### Actual Result
 - The response contains worng & an invoice details for the inserted id invoice.(Failed  
 
-# TC-10
+# TC-11
 ## Verify that the user can view detailed information of a specific invoice using a invalid ID.
 ### Steps
 - GET /invoices/{id} endpoint.
@@ -129,7 +129,7 @@
 ### Actual Result
 - The response returns an error message.
 
-# TC-11
+# TC-12
 ## Verify that the user can view detailed information of a specific invoice using a non-existence ID.
 ### Steps
 - GET /invoices/{id} endpoint.
@@ -139,7 +139,7 @@
 ### Actual Result
 - The response with a invoice details is appeared,Despite of that id & invoice details is not includes the list of all invoices. (Failed)
 
-# TC-12
+# TC-13
 ##  Verify that the software can Calculate Total Profit & Total Amount, while create a new invoice with all valid details.
 ### Steps
 - POST /invoices endpoint.
@@ -151,8 +151,8 @@
 - After creating an invoice, we found that that the total profit is calculated uncorrectly.(Failed)
 
   
-* Return Existing Invoice
-# TC-13
+# Return Existing Invoice
+# TC-14
 ## Verify that the user can return an existing invoice.
 ### Steps
 - POST /invoices/{id}/return endpoint.
@@ -162,8 +162,8 @@
 ### Actual Result
 - Executed and observed the error message "Cannot return a paid invoice".(Failed)
   
-* Pay Invoice
-# TC-14
+# Pay Invoice
+# TC-15
 ##  Verify that the user can pay a specific invoice with a valid amount.
 ### Steps
 - POST /invoices/{id}/pay endpoint.
@@ -173,7 +173,7 @@
 ### Actual Result
 - The response returns Error: response status is 400 with response body"Invoice is already paid."(Failed)
 
-# TC-15
+# TC-16
 ##  Verify that the user can pay a specific invoice with a valid amount for non-exsitence Id invoice .
 ### Steps
 - POST /invoices/{id}/pay endpoint.
