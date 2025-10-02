@@ -1,6 +1,6 @@
 # Test Summary Report for Assignment QS3
 ## Mange Contacts Module 
-* Test Cases Rate: 
+
 - Test Case Excuted= 24
 - Test Case Pass= 14
 - Test Cases Fail= 10
@@ -9,7 +9,7 @@
 - Number of Bugs Detected= 10
 
 ## Mange Invoices Module 
-* Test Cases Rate: 
+
 - Test Case Excuted= 17
 - Test Case Pass= 9
 - Test Cases Fail= 8
