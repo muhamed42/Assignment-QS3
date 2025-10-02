@@ -49,7 +49,7 @@
 - required not ot put negative sign.
 
 # TC-05
-## Verify that the user can create a new invoice with valid details with negative amount in discount fields.
+## Verify that the user can't create a new invoice with negative amount in discount fields.
 ### Steps
 - Input negative amount in the payload with discount field.
 - Click on 'Try it out', fill in the necessary details, and execute."
@@ -61,7 +61,7 @@
 - required not ot put negative sign & discount% should be between 0 t0 100.
 
 # TC-06
-## Verify that the user can create a new invoice with valid details with amount in discount fields.
+## Verify that the user can't create a new invoice with invalid amount in discount fields.
 ### Steps
 - Input amount 101 in the payload with discount field. 
 - Click on 'Try it out', fill in the necessary details, and execute."
@@ -73,7 +73,7 @@
 - required discount % should be between 0 t0 100.
 
 # TC-07
-## Verify that the user can create a new invoice with valid details with negative amount in tax fields.
+## Verify that the user can't create a new invoice with negative amount in tax fields.
 ### Steps
 - Input negative amount in the payload with cost tax .
 - Click on 'Try it out', fill in the necessary details, and execute."
@@ -85,7 +85,7 @@
 - required not ot put negative sign.
 
 # TC-08
-## Verify that the user can create a new invoice with valid details with amount cost fields.
+## Verify that the user can't create a new invoice with invalid amount cost fields.
 ### Steps
 - Input negative amount in the payload with cost(01) .
 - Click on 'Try it out', fill in the necessary details, and execute."
@@ -97,9 +97,9 @@
 - Invalid leading zero before '1'
 
  # TC-09
-## Verify that the user can create a new invoice with valid details with amount cost fields.
+## Verify that the user can't create a new invoice with invalid amount cost fields.
 ### Steps
-- Input negative amount in the payload with cost(a) .
+- Input amount in the payload with cost="a" .
 - Click on 'Try it out', fill in the necessary details, and execute."
 - The response should indicate that the invoice wasn't created successfully.
 ### Expected Result
