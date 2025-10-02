@@ -287,6 +287,6 @@ The response returns an error message indicating the contact does not exist.
 ### Expected Result
 -end a PATCH request to the /contacts/{id}/balance endpoint with a negative amount.
 ### Actual Result
-- The software accepts the negative amount, i guess that doesn't suppose to happen.Failed)
+- The software accepts the negative amount.
   
  
