@@ -11,7 +11,7 @@
 ## Mange Invoices Module 
 * Test Cases Rate: 
 - Test Case Excuted= 17
-- Test Case Pass= 11
+- Test Case Pass= 9
 - Test Cases Fail= 8
 - Pass rate= 53%
 - Fail rate= 47%
