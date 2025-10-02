@@ -1,5 +1,5 @@
 # View All Contacts
-# TC-01
+# TC-01🟢
 ## Verify that the user can view all contacts without any filters.
 ### Steps
 - Navigate to the GET /contacts endpoint.
@@ -10,7 +10,7 @@
 ### Actual Result
 - The response includes a list of all contacts.
 
-# TC-02
+# TC-02🟢
 ## Verify that the user can view contacts with pagination
 ## Test Data: page=1, limit=10
 ### Steps
@@ -22,7 +22,7 @@
 ### Actual Result
 - The response includes a paginated list of contacts.
 
-# TC-03
+# TC-03🟢
 ## Verify that the user can view contacts with pagination
 ## Test Data: page=2, limit=10
 ### Steps
@@ -34,7 +34,7 @@
 ### Actual Result
 - The response includes a paginated list of contacts.
   
-# TC-04
+# TC-04🟢
 ## Verify that the user can view contacts with pagination
 ## Test Data: page=1, limit=2
 ### Steps
@@ -46,7 +46,7 @@
 ### Actual Result
 - The response includes a paginated list of contacts.
 
-# TC-05
+# TC-05🟢
 ## Verify that the user can view contacts with search parameters.
 ## Test Data: "Email:mohamedelbehairy1@hotmail.com"
 ### Steps
@@ -60,7 +60,7 @@
 - The response includes contacts matching the search criteria.
 - Showing all the details of the contact.
 
-# TC-06
+# TC-06🟢
 ## Verify that the user can view contacts with search parameters.
 ## Test Data: "Firstname"
 ### Steps
@@ -74,7 +74,7 @@
 - The response includes contacts matching the search criteria.
 - Showing all the details of the contact.
 
-# TC-07
+# TC-07🟢
 ## Verify that the user can view contacts with search parameters.
 ## Test Data: "Lastname"
 ### Steps
@@ -88,7 +88,7 @@
 - The response includes contacts matching the search criteria.
 - Showing all the details of the contact.
 - 
-# TC-08
+# TC-08🔴
 ## Verify that the user can view contacts with search parameters (Invalid Contact email).
 ## Test Data: "email"
 ### Steps
@@ -102,7 +102,7 @@
 - Showing all the details of the contact.(Failed)
   
 # Create New Contact
-# TC-09
+# TC-09🟢
 ## Verify that the user can create a new contact with valid details.
 ## Test Data 
 - Mohamed
@@ -117,7 +117,7 @@
 ### Actual Result
 - A success message is returned, and the new contact is added to the contact list.
 
-# TC-10
+# TC-10🔴
 ## Verify that the user can create a new contact with valid details.
 ## Test Data 
 - Mohamed
