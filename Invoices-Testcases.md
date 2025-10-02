@@ -137,7 +137,7 @@
 ### Expected Result
 - The response returns an error message.
 ### Actual Result
-- The response with a invoice details is appeared,instead that the id is non-exist in database.(Failed)
+- The response with a invoice details is appeared,Despite of that id is not includes the list of all invoices. (Failed)
 
 # TC-12
 ##  Verify that the software can Calculate Total Profit & Total Amount, while create a new invoice with all valid details.
