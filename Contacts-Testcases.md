@@ -1,4 +1,4 @@
-* View All Contacts
+# View All Contacts
 # TC-01
 ## Verify that the user can view all contacts without any filters.
 ### Steps
