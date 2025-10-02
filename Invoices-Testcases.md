@@ -25,7 +25,7 @@
 
   
 # TC-03
-## Verify that the user can create a new invoice with valid details with missing fields.
+## Verify that the user can't create a new invoice with valid details with missing fields.
 ### Steps
 - Input valid details in the payload with missing fields(createdby)
 - Click on 'Try it out', fill in the necessary details, and execute."
@@ -37,7 +37,7 @@
 - As Excpected.
 
 # TC-04
-## Verify that the user can create a new invoice with valid details with negative amount in cost fields.
+## Verify that the user can't create a new invoice with valid details with negative amount in cost fields.
 ### Steps
 - Input negative amount in the payload with cost field.
 - Click on 'Try it out', fill in the necessary details, and execute."
