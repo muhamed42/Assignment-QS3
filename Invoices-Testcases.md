@@ -1,5 +1,5 @@
 # View List of Invoices
-# TC-01
+# 🟢TC-01
 ## Verify that the user can view a list of invoices associated with their account.
 ### Steps
 - Navigate to the GET /invoices endpoint.
@@ -11,7 +11,7 @@
 - The response includes a list of all invoices.
 
 # Create New Invoice
-# TC-02
+# 🔴TC-02
 ## Verify that the user can create a new invoice with valid details.
 ### Steps
 - Input valid details in the payload.
@@ -21,10 +21,9 @@
 - The response should indicate that the invoice was created successfully.
 ### Actual Result
 - A new invoice is created, and the response indicates success.
-- But it has a wrong "Username" not as i entered while create invoice, Also all Invoices that have been created have same "Username".(Failed)
-
+- But it has a wrong "Username" not as i entered while create invoice, Also all Invoices that have been created have same "Username".
   
-# TC-03
+# 🟢TC-03
 ## Verify that the user can't create a new invoice with valid details with missing fields.
 ### Steps
 - Input valid details in the payload with missing fields(createdby)
@@ -36,7 +35,7 @@
 - The response should indicate that the invoice wasn't created successfully.
 - As Excpected.
 
-# TC-04
+# 🟢TC-04
 ## Verify that the user can't create a new invoice with valid details with negative amount in cost fields.
 ### Steps
 - Input negative amount in the payload with cost field.
@@ -48,7 +47,7 @@
 - The response should indicate that the invoice wasn't created successfully.
 - required not ot put negative sign.
 
-# TC-05
+# 🟢TC-05
 ## Verify that the user can't create a new invoice with negative amount in discount fields.
 ### Steps
 - Input negative amount in the payload with discount field.
@@ -60,7 +59,7 @@
 - The response should indicate that the invoice wasn't created successfully.
 - required not ot put negative sign & discount% should be between 0 t0 100.
 
-# TC-06
+# 🟢TC-06
 ## Verify that the user can't create a new invoice with invalid amount in discount fields.
 ### Steps
 - Input amount 101 in the payload with discount field. 
@@ -72,7 +71,7 @@
 - The response should indicate that the invoice wasn't created successfully.
 - required discount % should be between 0 to 100.
 
-# TC-07
+# 🟢TC-07
 ## Verify that the user can't create a new invoice with negative amount in tax fields.
 ### Steps
 - Input negative amount in the payload with cost tax .
@@ -84,7 +83,7 @@
 - The response should indicate that the invoice wasn't created successfully.
 - required not ot put negative sign.
 
-# TC-08
+# 🟢TC-08
 ## Verify that the user can't create a new invoice with invalid amount cost fields.
 ### Steps
 - Input negative amount in the payload with cost(01) .
@@ -96,7 +95,7 @@
 - The response should indicate that the invoice wasn't created successfully.
 - Invalid leading zero before '1'
 
-# TC-09
+# 🟢TC-09
 ## Verify that the user can't create a new invoice with invalid amount cost fields.
 ### Steps
 - Input amount in the payload with cost="a" .
@@ -109,7 +108,7 @@
 - 'a' is an invalid start of a value
 
 # View Invoice Details
-# TC-10
+# 🔴TC-10
 ## Verify that the user can view detailed information of a specific invoice using a valid ID.
 ### Steps
 - GET /invoices/{id} endpoint.
@@ -117,9 +116,9 @@
 ### Expected Result
 - The response contains detailed information for the specified invoice.
 ### Actual Result
-- The response contains worng & an invoice details for the inserted id invoice.(Failed)  
+- The response contains worng & an invoice details for the inserted id invoice.
 
-# TC-11
+# 🟢TC-11
 ## Verify that the user can view detailed information of a specific invoice using a invalid ID.
 ### Steps
 - GET /invoices/{id} endpoint.
@@ -129,7 +128,7 @@
 ### Actual Result
 - The response returns an error message.
 
-# TC-12
+# 🔴TC-12
 ## Verify that the user can't view detailed information of a specific invoice using a non-existence ID.
 ### Steps
 - GET /invoices/{id} endpoint.
@@ -137,9 +136,9 @@
 ### Expected Result
 - The response returns an error message.
 ### Actual Result
-- The response with a invoice details is appeared,Despite of that id & invoice details is not includes the list of all invoices. (Failed)
+- The response with a invoice details is appeared,Despite of that id & invoice details is not includes the list of all invoices.
 
-# TC-13
+# 🔴TC-13
 ##  Verify that the software can Calculate Total Profit & Total Amount, while create a new invoice with all valid details.
 ### Steps
 - POST /invoices endpoint.
@@ -148,11 +147,11 @@
 - Check the response to ensure the profit amount is accurate.".
 ### Actual Result
 - After creating an invoice, we found that that the total profit is calculated uncorrectly.
-- After creating an invoice, we found that that the total profit is calculated uncorrectly.(Failed)
+- After creating an invoice, we found that that the total profit is calculated uncorrectly.
 
   
 # Return Existing Invoice
-# TC-14
+# 🔴TC-14
 ## Verify that the user can return an existing invoice.
 ### Steps
 - POST /invoices/{id}/return endpoint.
@@ -160,9 +159,9 @@
 ### Expected Result
 - The invoice is marked as returned, and the contact's balance is adjusted.
 ### Actual Result
-- Executed and observed the error message "Cannot return a paid invoice".(Failed)
+- Executed and observed the error message "Cannot return a paid invoice".
 
-# TC-15
+# 🔴TC-15
 ## Verify that the user can't return an existing invoice with invalid invoice ID.
 ### Steps
 - POST /invoices/{id}/return endpoint.
@@ -170,10 +169,10 @@
 ### Expected Result
 - The invoice is marked as unreturned due to the invalid invoice id.
 ### Actual Result
-- Executed and observed the  message "Cannot return a paid invoice".(Failed)
+- Executed and observed the  message "Cannot return a paid invoice".
    
 # Pay Invoice
-# TC-16
+# 🔴TC-16
 ##  Verify that the user can pay a specific invoice with a valid amount.
 ### Steps
 - POST /invoices/{id}/pay endpoint.
@@ -181,9 +180,9 @@
 ### Expected Result
 - The invoice is marked as paid, and the payment amount is added to the contact's balance.
 ### Actual Result
-- The response returns Error: response status is 400 with response body"Invoice is already paid."(Failed)
+- The response returns Error: response status is 400 with response body"Invoice is already paid.
 
-# TC-17
+# 🔴TC-17
 ##  Verify that the user can pay a specific invoice with a valid amount for non-exsitence Id invoice .
 ### Steps
 - POST /invoices/{id}/pay endpoint.
@@ -191,4 +190,4 @@
 ### Expected Result
 - The response returns an error message non-existence Id invoice
 ### Actual Result
-- The response returns Error: response status is 400 with response body"Invoice is already paid."(Failed)
+- The response returns Error: response status is 400 with response body"Invoice is already paid.
