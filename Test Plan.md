@@ -17,9 +17,7 @@
 2. Which Testing Types Do We Need
 - Functional Testing: To verify that each feature works as specified in the user stories.
 - Integration Testing: To ensure that interactions between the contacts and invoices modules function correctly.
-- UI Testing: To validate the user interface for viewing, creating, and managing contacts and invoices.
 - Performance Testing: To evaluate system performance under different loads, especially for retrieving lists of contacts or invoices.
-- Security Testing: To ensure that data access and manipulation are secure and unauthorized users cannot access or modify data.
 
 3. What Document Do We Need
 - Test Plan Document*: Outlining the overall testing strategy, objectives, resources, schedule, and scope.
@@ -56,4 +54,3 @@
 - Validate Data Integrity: Confirm that data is accurate and consistent across the system after performing operations like creating, updating, and deleting.
 - Assess System Performance: Evaluate how the system performs under various loads, especially during data retrieval operations.
 - Ensure User Experience: Validate that the user interface is intuitive and meets user requirements.
-- Confirm Security Measures: Ensure that sensitive data is protected and that users have appropriate access rights.
