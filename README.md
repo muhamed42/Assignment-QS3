@@ -4,4 +4,4 @@ The repo contains:
 - Contacts-Testcases.md
 - Invoices-Testcases.md
 - Test Summary Report.md
-Every File consists of the specific required the cover all items needed in each file.  
+- Every File consists of the specific required the cover all items needed in each file.  
