@@ -5,6 +5,6 @@ Every File consists of the specific required that cover all items needed in each
 - [Contacts Testcases](./Contacts-Testcases.md)
 - [Contacts Bug Report](./Contacts-Bug-Report.issue)
 - [Invoices Testcases](./Invoices-Testcases.md)
-- [Invoices Bug Report](./Invoice-Bug-Report.issue)
+- Invoices Bug Report: https://github.com/muhamed42/Assignment-QS3/issues/20
 - [Test Summary Report](./Test-Summary-Report.md)
   
