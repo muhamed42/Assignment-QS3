@@ -1,5 +1,5 @@
 This is a guidance for the repo related to solution for assignment QS3
-The repo Contains: 
+The repo contains: 
 - Test Plan.md
 - Contacts-Testcases.md
 - Invoices-Testcases.md
