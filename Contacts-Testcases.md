@@ -49,6 +49,7 @@
 # 🟢TC-05
 ## User can view contacts with search parameters.
 ## Test Data: 
+
 ```json
 {
      "firstname": "Mohamed",
@@ -57,7 +58,7 @@
      "phone": "01155003316",
      "balance": "2"
      "username": "Mo"
-   }
+   }```,
 
 ### Steps
 - Navigate to the GET /contacts endpoint.
