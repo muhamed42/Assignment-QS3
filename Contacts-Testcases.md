@@ -58,7 +58,8 @@
      "phone": "01155003316",
      "balance": "2"
      "username": "Mo"
-   }```;
+   }
+```
 
 ### Steps
 - Navigate to the GET /contacts endpoint.
