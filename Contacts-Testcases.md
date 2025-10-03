@@ -49,15 +49,15 @@
 # 🟢TC-05
 ## User can view contacts with search parameters.
 ## Test Data: 
-'''{
-json
+```json
+{
      "firstname": "Mohamed",
      "lastname": "Samir",
      "email": "mohamedelbehairy1@hotmail.com",
      "phone": "01155003316",
      "balance": "2"
      "username": "Mo"
-   }'''
+   }```
 ### Steps
 - Navigate to the GET /contacts endpoint.
 - Add a query parameter for search 
