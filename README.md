@@ -2,9 +2,9 @@
 # The repo contains:
 Every File consists of the specific required that cover all items needed in each file.
 - Test Plan.md
-- Contacts-Testcases.md
+- Contacts Testcases.md
 - Contacts Bug Report
-- Invoices-Testcases.md
+- Invoices Testcases.md
 - Invoices Bug Report
 - Test Summary Report.md
   
