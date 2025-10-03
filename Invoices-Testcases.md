@@ -12,7 +12,23 @@
 
 # Create New Invoice
 # 🔴TC-02
-## Verify that the user can create a new invoice with valid details.
+## Create a new invoice with valid details.
+## Test Data
+```json
+{
+  "id": "3fa85f64-5717-4562-b3fc-2c963f66afa8",
+  "contactId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "createdBy": "Alo",
+  "cost": 100,
+  "discountPercentage": 40,
+  "taxAmount": 10,
+  "totalAmount": 66,
+  "totalProfit": 0,
+  "status": 2,
+  "createdDate": "2025-10-01T22:52:14.344Z",
+  "username": "Me"
+}
+ ```
 ### Steps
 - Input valid details in the payload.
 - Click on 'Try it out', fill in the necessary details, and execute."
@@ -23,8 +39,24 @@
 - A new invoice is created, and the response indicates success.
 - But it has a wrong "Username" not as i entered while create invoice, Also all Invoices that have been created have same "Username".
   
-# 🟢TC-03
-## Verify that the user can't create a new invoice with valid details with missing fields.
+# 🔴TC-03
+## Create a new invoice with valid details with missing fields.
+## Test Data 
+```json
+{
+  "id": "3fa85f64-5717-4562-b3fc-2c963f66afa8",
+  "contactId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "createdBy": "",
+  "cost": 100,
+  "discountPercentage": 40,
+  "taxAmount": 10,
+  "totalAmount": 66,
+  "totalProfit": 0,
+  "status": 2,
+  "createdDate": "2025-10-01T22:52:14.344Z",
+  "username": "Me"
+}
+ ```
 ### Steps
 - Input valid details in the payload with missing fields(createdby)
 - Click on 'Try it out', fill in the necessary details, and execute."
@@ -36,7 +68,23 @@
 - As Excpected.
 
 # 🟢TC-04
-## Verify that the user can't create a new invoice with valid details with negative amount in cost fields.
+## Can't Create a new invoice with valid details with negative amount in cost fields.
+## Test Data
+```json
+{
+  "id": "3fa85f64-5717-4562-b3fc-2c963f66afa8",
+  "contactId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "createdBy": "tyrfyt",
+  "cost": -100,
+  "discountPercentage": 40,
+  "taxAmount": 10,
+  "totalAmount": 66,
+  "totalProfit": 0,
+  "status": 2,
+  "createdDate": "2025-10-01T22:52:14.344Z",
+  "username": "Me"
+}
+ ```
 ### Steps
 - Input negative amount in the payload with cost field.
 - Click on 'Try it out', fill in the necessary details, and execute."
@@ -48,7 +96,23 @@
 - required not ot put negative sign.
 
 # 🟢TC-05
-## Verify that the user can't create a new invoice with negative amount in discount fields.
+## Can't Create a new invoice with negative amount in discount fields.
+## Test Data
+```json
+{
+  "id": "3fa85f64-5717-4562-b3fc-2c963f66afa8",
+  "contactId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "createdBy": "jhygyuj",
+  "cost": 100,
+  "discountPercentage": -40,
+  "taxAmount": 10,
+  "totalAmount": 66,
+  "totalProfit": 0,
+  "status": 2,
+  "createdDate": "2025-10-01T22:52:14.344Z",
+  "username": "Me"
+}
+ ```
 ### Steps
 - Input negative amount in the payload with discount field.
 - Click on 'Try it out', fill in the necessary details, and execute."
@@ -60,7 +124,23 @@
 - required not ot put negative sign & discount% should be between 0 t0 100.
 
 # 🟢TC-06
-## Verify that the user can't create a new invoice with invalid amount in discount fields.
+## Can't Create a new invoice with invalid amount in discount fields.
+## Test Data
+```json
+{
+  "id": "3fa85f64-5717-4562-b3fc-2c963f66afa8",
+  "contactId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "createdBy": "uyfgyu",
+  "cost": 100,
+  "discountPercentage": 101,
+  "taxAmount": 10,
+  "totalAmount": 66,
+  "totalProfit": 0,
+  "status": 2,
+  "createdDate": "2025-10-01T22:52:14.344Z",
+  "username": "Me"
+}
+ ```
 ### Steps
 - Input amount 101 in the payload with discount field. 
 - Click on 'Try it out', fill in the necessary details, and execute."
@@ -72,7 +152,23 @@
 - required discount % should be between 0 to 100.
 
 # 🟢TC-07
-## Verify that the user can't create a new invoice with negative amount in tax fields.
+## Can't Create a new invoice with negative amount in tax fields.
+## Test Data
+```json
+{
+  "id": "3fa85f64-5717-4562-b3fc-2c963f66afa8",
+  "contactId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "createdBy": "",
+  "cost": 100,
+  "discountPercentage": 40,
+  "taxAmount": -10,
+  "totalAmount": 66,
+  "totalProfit": 0,
+  "status": 2,
+  "createdDate": "2025-10-01T22:52:14.344Z",
+  "username": "Me"
+}
+ ```
 ### Steps
 - Input negative amount in the payload with cost tax .
 - Click on 'Try it out', fill in the necessary details, and execute."
@@ -84,7 +180,23 @@
 - required not ot put negative sign.
 
 # 🟢TC-08
-## Verify that the user can't create a new invoice with invalid amount cost fields.
+## Can't Create a new invoice with invalid amount cost fields.
+## Test Data
+```json
+{
+  "id": "3fa85f64-5717-4562-b3fc-2c963f66afa8",
+  "contactId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "createdBy": "",
+  "cost": 01,
+  "discountPercentage": 40,
+  "taxAmount": 10,
+  "totalAmount": 66,
+  "totalProfit": 0,
+  "status": 2,
+  "createdDate": "2025-10-01T22:52:14.344Z",
+  "username": "Me"
+}
+ ```
 ### Steps
 - Input negative amount in the payload with cost(01) .
 - Click on 'Try it out', fill in the necessary details, and execute."
@@ -96,7 +208,23 @@
 - Invalid leading zero before '1'
 
 # 🟢TC-09
-## Verify that the user can't create a new invoice with invalid amount cost fields.
+## Can't create a new invoice with invalid amount cost fields.
+## Test Data
+```json
+{
+  "id": "3fa85f64-5717-4562-b3fc-2c963f66afa8",
+  "contactId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "createdBy": "",
+  "cost": a,
+  "discountPercentage": 40,
+  "taxAmount": 10,
+  "totalAmount": 66,
+  "totalProfit": 0,
+  "status": 2,
+  "createdDate": "2025-10-01T22:52:14.344Z",
+  "username": "Me"
+}
+ ```
 ### Steps
 - Input amount in the payload with cost="a" .
 - Click on 'Try it out', fill in the necessary details, and execute."
@@ -109,7 +237,13 @@
 
 # View Invoice Details
 # 🔴TC-10
-## Verify that the user can view detailed information of a specific invoice using a valid ID.
+## View detailed information of a specific invoice using a valid ID.
+## Test Data
+```json
+{
+  "id": "3fa85f64-5717-4562-b3fc-2c963f66afa8",
+}
+ ```
 ### Steps
 - GET /invoices/{id} endpoint.
 - "Click 'Try it out', enter the ID, and hit 'Execute.' The response should provide the invoice details."
@@ -119,7 +253,13 @@
 - The response contains worng & an invoice details for the inserted id invoice.
 
 # 🟢TC-11
-## Verify that the user can view detailed information of a specific invoice using a invalid ID.
+## View detailed information of a specific invoice using a invalid ID.
+## Test Data
+```json
+{
+  "id": "3fa85f64-5717-4562-b3fc-2c963f66afa8",
+}
+ ```
 ### Steps
 - GET /invoices/{id} endpoint.
 - "Click 'Try it out', enter the invalid ID, and hit 'Execute.' The response shouldn't provide the any invoice details."
@@ -129,7 +269,13 @@
 - The response returns an error message.
 
 # 🔴TC-12
-## Verify that the user can't view detailed information of a specific invoice using a non-existence ID.
+## Can't view detailed information of a specific invoice using a non-existence ID.
+## Test Data 
+```json
+{
+  "id": "3fa85f64-5717-4562-b3fc-2c963f66afa7",
+}
+ ```
 ### Steps
 - GET /invoices/{id} endpoint.
 - "Click 'Try it out', enter the non-existence ID, and hit 'Execute.' The response shouldn't provide the any invoice details."
@@ -139,7 +285,23 @@
 - The response with a invoice details is appeared,Despite of that id & invoice details is not includes the list of all invoices.
 
 # 🔴TC-13
-##  Verify that the software can Calculate Total Profit & Total Amount, while create a new invoice with all valid details.
+##  Calculate Total Profit & Total Amount, while create a new invoice with all valid details.
+## Test Data
+```json
+{
+  "id": "3fa85f64-5717-4562-b3fc-2c963f66afa8",
+  "contactId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "createdBy": "Alo",
+  "cost": 100,
+  "discountPercentage": 40,
+  "taxAmount": 10,
+  "totalAmount": 66,
+  "totalProfit": 30,
+  "status": 2,
+  "createdDate": "2025-10-01T22:52:14.344Z",
+  "username": "Me"
+}
+ ```
 ### Steps
 - POST /invoices endpoint.
 - "Click 'Try it out', enter the valid details in fields , and hit 'Execute.' The Create an invoice and verify profit calculation.
@@ -152,7 +314,13 @@
   
 # Return Existing Invoice
 # 🔴TC-14
-## Verify that the user can return an existing invoice.
+## Can return an existing invoice.
+## Test Data
+```json
+{
+  "id": "3fa85f64-5717-4562-b3fc-2c963f66afa9",
+}
+ ```
 ### Steps
 - POST /invoices/{id}/return endpoint.
 - "Click 'Try it out', enter the invoice ID, and hit 'Execute.'
@@ -162,7 +330,13 @@
 - Executed and observed the error message "Cannot return a paid invoice".
 
 # 🔴TC-15
-## Verify that the user can't return an existing invoice with invalid invoice ID.
+## Can't return an existing invoice with invalid invoice ID.
+## Test Data 
+```json
+{
+  "id": "3fa85f64-5717-4562-b3fc-2c963f66afa3",
+}
+ ```
 ### Steps
 - POST /invoices/{id}/return endpoint.
 - "Click 'Try it out', enter the invalid invoice ID, and hit 'Execute.'
@@ -173,7 +347,15 @@
    
 # Pay Invoice
 # 🔴TC-16
-##  Verify that the user can pay a specific invoice with a valid amount.
+## Pay a specific invoice with a valid amount.
+## Test Data 
+```json
+{
+  "invoiceId": "3fa85f64-5717-4562-b3fc-2c963f66afa9",
+  "amount": "30",
+  
+}
+ ```
 ### Steps
 - POST /invoices/{id}/pay endpoint.
 -  enter a valid invoice ID, let’s pay a specific invoice with a valid amount." and hit 'Execute.'
@@ -183,11 +365,74 @@
 - The response returns Error: response status is 400 with response body"Invoice is already paid.
 
 # 🔴TC-17
-##  Verify that the user can pay a specific invoice with a valid amount for non-exsitence Id invoice .
+## Pay a valid amount for non-exsitence Id invoice.
+## Test Data
+```json
+{
+  "invoiceId": "3fa85f64-5717-4562-b3fc-2c963f66afa1",
+ 
+  
+}
+ ```
 ### Steps
 - POST /invoices/{id}/pay endpoint.
 -  enter a invalid invoice ID, let’s pay a specific invoice with a valid amount." and hit 'Execute.'
 ### Expected Result
 - The response returns an error message non-existence Id invoice
 ### Actual Result
-- The response returns Error: response status is 400 with response body"Invoice is already paid.
+- The response returns Error: response status is 400 with response body"Invoice is already paid.Despite the invoice id not registered on database.
+
+# 🟢TC-18
+## Pay a invalid amount for Id invoice.
+## Test Data
+```json
+{
+  "invoiceId": "3fa85f64-5717-4562-b3fc-2c963f66afa9",
+  "amount": "y"
+  
+}
+ ```
+### Steps
+- POST /invoices/{id}/pay endpoint.
+-  enter a valid invoice ID, let’s pay a specific invoice with a invalid alphabetic charater  amount"y" and hit 'Execute.'
+### Expected Result
+- The response returns an error message non-existence Id invoice
+### Actual Result
+- The response returns Error: response status is 400 with response body error in amount
+
+# 🟢TC-19
+## Pay a invalid amount for Id invoice.
+## Test Data
+```json
+{
+  "invoiceId": "3fa85f64-5717-4562-b3fc-2c963f66afa9",
+  "amount": "1f"
+  
+}
+ ```
+### Steps
+- POST /invoices/{id}/pay endpoint.
+-  enter a valid invoice ID, let’s pay a specific invoice with a invalid numbers & alphabetic characters  amount"" and hit 'Execute.'
+### Expected Result
+- The response returns an error message non-existence Id invoice
+### Actual Result
+- The response returns Error: response status is 400 with response body error in amount
+
+
+# 🟢TC-20
+## Pay a invalid amount for Id invoice.
+## Test Data
+```json
+{
+  "invoiceId": "3fa85f64-5717-4562-b3fc-2c963f66afa9",
+  "amount": "34#"
+  
+}
+ ```
+### Steps
+- POST /invoices/{id}/pay endpoint.
+-  enter a valid invoice ID, let’s pay a specific invoice with a invalid number & special charaters  amount34#" and hit 'Execute.'
+### Expected Result
+- The response returns an error message non-existence Id invoice
+### Actual Result
+- The response returns Error: response status is 400 with response body error in amount
