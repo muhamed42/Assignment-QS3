@@ -58,6 +58,7 @@
      "balance": "2"
      "username": "Mo"
    }```
+
 ### Steps
 - Navigate to the GET /contacts endpoint.
 - Add a query parameter for search 
