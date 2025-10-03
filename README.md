@@ -6,4 +6,4 @@ The repo contains:
 - Invoices-Testcases.md
 - Invoices Bug Report
 - Test Summary Report.md
-- Every File consists of the specific required the cover all items needed in each file.  
+- Every File consists of the specific required that cover all items needed in each file.  
