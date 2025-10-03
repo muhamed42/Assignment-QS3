@@ -48,7 +48,15 @@
 
 # 🟢TC-05
 ## User can view contacts with search parameters.
-## Test Data: "Email:mohamedelbehairy1@hotmail.com"
+## Test Data: 
+{
+     "firstname": "Mohamed",
+     "lastname": "Samir",
+     "email": "mohamedelbehairy1@hotmail.com",
+     "phone": "01155003316",
+     "balance": "2"
+     "username": "Mo"
+   }
 ### Steps
 - Navigate to the GET /contacts endpoint.
 - Add a query parameter for search 
@@ -106,6 +114,7 @@
 ## User can create a new contact with valid details.
 ## Test Data 
 - Mohamed
+- samir
 - samir55486@gmail.com
 - 01155003316"
 ### Steps
@@ -121,7 +130,8 @@
 ## User can create a new contact with valid details.
 ## Test Data 
 - Mohamed
-- samir55486@gmail.com
+- samir
+- mohamedelbehairy1@hotmail.com
 - 01155003316"
 ### Steps
 - Navigate to the POST /contacts endpoint.
@@ -148,9 +158,11 @@ But,The balance for the Contacts created have the same number, Despite entering 
 
 # 🔴TC-12
 ## Another User can create another new contact with valid details..
-## Test Data 
-"mohamedelbehairy99@hotmail.com
-01155003319"
+## Test Data
+- Samir
+- Samir
+- mohamedelbehairy99@hotmail.com
+- 01155003319"
 ### Steps
 - Navigate to the POST /contacts endpoint.
 - Input valid data in the payload fields.
