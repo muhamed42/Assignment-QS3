@@ -26,7 +26,7 @@
   "totalProfit": 0,
   "status": 2,
   "createdDate": "2025-10-01T22:52:14.344Z",
-  "username": "Me"
+  "username": "Me",
 }
  ```
 ### Steps
@@ -54,7 +54,7 @@
   "totalProfit": 0,
   "status": 2,
   "createdDate": "2025-10-01T22:52:14.344Z",
-  "username": "Me"
+  "username": "Me",
 }
  ```
 ### Steps
@@ -82,7 +82,7 @@
   "totalProfit": 0,
   "status": 2,
   "createdDate": "2025-10-01T22:52:14.344Z",
-  "username": "Me"
+  "username": "Me",
 }
  ```
 ### Steps
@@ -110,7 +110,7 @@
   "totalProfit": 0,
   "status": 2,
   "createdDate": "2025-10-01T22:52:14.344Z",
-  "username": "Me"
+  "username": "Me",
 }
  ```
 ### Steps
@@ -138,7 +138,7 @@
   "totalProfit": 0,
   "status": 2,
   "createdDate": "2025-10-01T22:52:14.344Z",
-  "username": "Me"
+  "username": "Me",
 }
  ```
 ### Steps
@@ -166,7 +166,7 @@
   "totalProfit": 0,
   "status": 2,
   "createdDate": "2025-10-01T22:52:14.344Z",
-  "username": "Me"
+  "username": "Me",
 }
  ```
 ### Steps
@@ -194,7 +194,7 @@
   "totalProfit": 0,
   "status": 2,
   "createdDate": "2025-10-01T22:52:14.344Z",
-  "username": "Me"
+  "username": "Me",
 }
  ```
 ### Steps
@@ -222,7 +222,7 @@
   "totalProfit": 0,
   "status": 2,
   "createdDate": "2025-10-01T22:52:14.344Z",
-  "username": "Me"
+  "username": "Me",
 }
  ```
 ### Steps
@@ -299,7 +299,7 @@
   "totalProfit": 30,
   "status": 2,
   "createdDate": "2025-10-01T22:52:14.344Z",
-  "username": "Me"
+  "username": "Me",
 }
  ```
 ### Steps
@@ -370,7 +370,7 @@
 ```json
 {
   "invoiceId": "3fa85f64-5717-4562-b3fc-2c963f66afa1",
- 
+  "amount": "40",
   
 }
  ```
@@ -388,7 +388,7 @@
 ```json
 {
   "invoiceId": "3fa85f64-5717-4562-b3fc-2c963f66afa9",
-  "amount": "y"
+  "amount": "y",
   
 }
  ```
